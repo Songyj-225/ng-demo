@@ -1,0 +1,46 @@
+ <div class="login-container">
+        <div class="box-container">
+            <div class="box-title row">
+                <div class="col-md-12 col-xs-12">
+                    <h2 class="text-center box-wz">图书管理系统</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <form class="form" role="form" name="myForm" novalidate ng-controller="validateCtrl" >
+                        <!---用户名-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon rgba">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </div>
+                                <input class="form-control rgba inputrl" ng-model="user.email" name="email" type="email" placeholder="用户名建议使用邮箱" required>
+                                <span ng-show="myForm.email.$dirty &&myForm.email.$invalid || myForm.email.$valid">
+                                    <span ng-show="myForm.email.$valid" class="glyphicon glyphicon-ok form-control-feedback text-success "></span>
+                                    <span  ng-show="myForm.email.$error.email" class="glyphicon glyphicon-remove form-control-feedback text-danger"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!---密码-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon rgba">
+                                    <span class="glyphicon glyphicon-repeat"></span>
+                                </div>
+                                <input class="form-control rgba inputrl" type="password" name="password" placeholder="输入密码" ng-model="user.password" required>
+                                <span ng-show="myForm.password.$dirty &&myForm.password.$invalid || myForm.password.$valid">
+                                    <span class="glyphicon glyphicon-ok form-control-feedback text-success" ng-show="myForm.password.$valid"></span>
+                                    <span class="glyphicon glyphicon-remove form-control-feedback text-danger" ng-show="myForm.password.$dirty &&myForm.password.$invalid "></span>
+                                 </span>
+                            </div>
+                        </div>
+                        <!---按钮-->
+                       <div class="form-group">
+                           <button type="submit" ui-sref="booklist({bookType:0})" class="btn btn-block btn-primary" ng-disabled="myForm.$invalid" ng-click="compare(user)">立即登陆</button>
+                       </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+ </div>

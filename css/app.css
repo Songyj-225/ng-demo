@@ -1,0 +1,152 @@
+/**去掉type=number 自带的小图标**/
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance:none !important;
+    margin:0;
+}
+/**谷歌浏览器记住密码的input**/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.3) inset !important;
+    border: 0px solid #CCC!important;
+    background: transparent!important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ccc !important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ccc !important;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #ccc !important;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ccc !important;
+}
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+.gridStyle {
+    border: 1px solid rgb(212, 212, 212);
+    height: 300px;
+    text-align:center;
+}
+.ngGridMaxPagesNumber {
+    display: inline-block;
+    height: 24px;
+    vertical-align: top;
+    font-size:16px;
+}
+html,body{
+    background: #eee
+}
+.bai{
+    background: #fff;
+    padding:15px;
+}
+.lan{
+    background:#428bca !important;
+    border-color:#428bca !important;
+}
+.lan .navbar-brand,.lan .navbar-nav li a{
+    color:#fff;
+}
+/**登陆页面**/
+.login-container{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1;
+    overflow:hidden;
+    min-height:100%;
+    background:url("../image/1.jpg") no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    background-size:cover;
+}
+.box-container{
+    width: 380px;
+    margin: 15% auto;
+    background:rgba(36, 36, 36,0.2);
+    border-radius: 20px;
+    padding: 15px 35px 15px 35px;
+}
+.box-title{
+    overflow: hidden;
+    margin:0 0 20px auto;
+    position: relative;
+    height: 50px;
+    border-bottom: 1px solid #9a8a6a;
+}
+.box-wz{
+    padding:0;
+    margin:0;
+    line-height:50px;
+    font-size:16px;
+    color:#fff;
+}
+.rgba{
+    background: rgba(255,255,255,.3) !important;
+    border:none !important;
+    color:#fff !important;
+    -webkit-box-shadow:none!important;
+    -moz-box-shadow:none!important;
+    box-shadow:none!important;
+}
+.inputrl{
+    padding:6px 12px 6px 0px !important;
+}
+/***后台首页**/
+.colorred{
+    background: #dd2200 !important;
+}
+#leftnav .nav li a{
+    color:#444;
+}
+#leftnav .nav>li>a:hover, #leftnav .nav>li>a:focus,.coloractive{
+    background: #f3f3f3!important;
+    color:#333 !important;
+}
+#leftnav{
+   background:#fff!important; 
+   border:0 none!important;
+}
+.page-mian{
+    margin-top:61px;
+} 
+.rigt{
+    margin-right: 15px;
+} 
+@media (max-width: 768px) {
+    .maright{
+        display: none!important
+    }    
+}
+@media (min-width: 768px) {
+    .maright{
+        margin-right:20px!important;
+    }
+    #leftnav{
+        /*background:#272c35!important;*/
+        width:220px;
+        position: fixed;
+        z-index: 1;  
+        min-height: 100%;
+        bottom: 0;
+        top:51px;
+        left:0;     
+    }
+    body,html{
+        min-height:100%;
+    }
+    .listbg li a{
+        padding-left:25px;
+    }
+    .page_mian{
+        margin-left:220px;
+    }
+}
+.container {
+    width: auto !important;
+}

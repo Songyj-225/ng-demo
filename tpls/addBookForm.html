@@ -1,0 +1,78 @@
+<div class="bai" ng-controller="Bookaddctrl">
+    <ol class="breadcrumb">
+      <li><a  ui-sref="booklist({bookType:0})">列表页</a></li>
+      <li class="active">新增书籍</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+            <form class="form-horizontal" role="form" name="form">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        书名：
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" placeholder="请输入书名,长度不能超过20" ng-model="userInfo.name"  name="textname" ng-maxlength="20" required>
+                        
+                        <span ng-show="form.textname.$valid" class="glyphicon glyphicon-ok form-control-feedback text-success rigt"></span>
+                        <span  ng-show="form.textname.$dirty&&form.textname.$invalid" class="glyphicon glyphicon-remove form-control-feedback text-danger rigt"></span>    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        类型：
+                    </label>
+                    <div class="col-md-8">
+                    <select class="form-control" ng-model="userInfo.zw">
+                        <option ng-repeat="x in sites" value="{{x.id}}">{{x.site}}</option>
+                    </select>
+                       
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        出版日期：
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="input-group">
+                            <input type="text" class="form-control" uib-datepicker-popup ng-model="userInfo.dt" is-open="popup2.opened" >
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        作者：
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" placeholder="请输入作者名字,长度不能超过20" name="autor" ng-model="userInfo.autor"  ng-maxlength="20" required>
+                        <span ng-show="form.autor.$valid" class="glyphicon glyphicon-ok form-control-feedback text-success rigt"></span>
+                        <span  ng-show="form.autor.$dirty&&form.autor.$invalid" class="glyphicon glyphicon-remove form-control-feedback text-danger rigt"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        定价：
+                    </label>
+                    <div class="col-md-8">
+                        <input type="number"  name="number" class="form-control" placeholder="请输入价钱" ng-model="userInfo.ruuty" required>
+                         <span ng-show="form.number.$valid" class="glyphicon glyphicon-ok form-control-feedback text-success rigt"></span>
+                        <span  ng-show="form.number.$dirty&&form.number.$invalid" class="glyphicon glyphicon-remove form-control-feedback text-danger rigt"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-8">
+                        <a  class="btn btn-success" ng-disabled="form.$invalid" ng-click="geto(userInfo)">保存</a>
+                        <a ui-sref="booklist({bookType:0})" class="btn btn-warning">取消</a>
+                        <button class="btn btn-default" ng-click="setFormData()">清空表单</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
